@@ -1,0 +1,12 @@
+Functions:
+	ft_strncat
+	ft_strncpy
+	ft_atoi_base
+	ft_itoa_base
+	stack_del (Like lst_del)
+	stack_ - every function that removes a node, deletes it with del() instead of free()
+Modules:
+	Printf
+Changes:
+	All of the useful defined from all other projects
+	Open my old projects and scour them to find anything that I could use in this libft.
