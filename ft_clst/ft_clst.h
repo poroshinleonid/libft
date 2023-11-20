@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:57:16 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 21:23:43 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:25:31 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,5 +157,69 @@ int		lst_swap_nodes(t_lst *node1, t_lst *node2);
 t_list	*lst_slice(t_lst *node1, t_lst *node2);
 
 void	*lst_to_array(t_lst **lst);
+
+/*
+Insertion Methods:
+
+insertAtBeginning(data): Inserts a new node with the given data at the beginning of the list.
+insertAtEnd(data): Inserts a new node with the given data at the end of the list.
+insertAfterNode(prevNode, data): Inserts a new node with the given data after the specified node.
+insertBeforeNode(nextNode, data): Inserts a new node with the given data before the specified node.
+Deletion Methods:
+
+deleteAtBeginning(): Deletes the first node in the list.
+deleteAtEnd(): Deletes the last node in the list.
+deleteNode(node): Deletes the specified node from the list.
+Traversal Methods:
+
+displayForward(): Displays the elements of the doubly linked list in the forward direction.
+displayBackward(): Displays the elements of the doubly linked list in the backward direction.
+Search Method:
+
+search(data): Searches for a node with the given data in the list and returns the node if found.
+Size and Empty Check:
+
+size(): Returns the number of nodes in the doubly linked list.
+isEmpty(): Returns true if the doubly linked list is empty, false otherwise.
+Other Utility Methods:
+
+getHead(): Returns the reference to the head of the doubly linked list.
+getTail(): Returns the reference to the tail of the doubly linked list.
+Reverse the List:
+
+reverse(): Reverses the order of elements in the doubly linked list.
+Update Node Value:
+
+updateValue(node, newData): Updates the data of a specific node with the new data.
+Get Nth Node:
+
+getNthNode(index): Returns the node at the specified index in the doubly linked list.
+Remove Duplicates:
+
+removeDuplicates(): Removes duplicate nodes from the doubly linked list.
+Split the List:
+
+splitAtNode(node): Splits the doubly linked list into two separate lists at the specified node.
+Merge Two Lists:
+
+merge(list1, list2): Merges two doubly linked lists into a single list.
+Swap Nodes:
+
+swapNodes(node1, node2): Swaps the positions of two nodes in the doubly linked list.
+Find Middle Node:
+
+findMiddle(): Finds and returns the middle node of the doubly linked list.
+Clear the List:
+
+clear(): Clears all nodes from the doubly linked list, making it empty.
+Convert to Array:
+
+toArray(): Converts the doubly linked list to an array.
+Slice the List:
+
+slice(startIndex, endIndex): Returns a new doubly linked list containing elements from the specified start index to the end index.
+Insert Sorted:
+
+insertSorted(data): Inserts a new node with the given data at the correct position in a sorted doubly linked list.*/
 
 #endif
