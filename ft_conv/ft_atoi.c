@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:32:52 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 16:40:08 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:38:00 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	ft_atoi(const char *str)
 
 	res = 0;
 	sign = 1;
+	if (str == NULL)
+		return (0);
 	while (ft_isspace(*str) || *str == '0')
 	{
 		if (*(str++) == '0')

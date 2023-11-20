@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_minmax.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:45:37 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:26:43 by lporoshi         ###   ########.fr       */
+/*   Created: 2023/11/14 19:01:45 by lporoshi          #+#    #+#             */
+/*   Updated: 2023/11/20 15:26:05 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_max(int a, int b)
 {
-	write(fd, &c, 1);
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+int	ft_min(int a, int b)
+{
+	if (a < b)
+		return (a);
+	return (b);
 }

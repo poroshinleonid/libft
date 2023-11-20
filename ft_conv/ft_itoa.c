@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:29:34 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 16:40:12 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:40:19 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_itoa_edgecases(char **resptr, int n)
 		*resptr = (char *)malloc(sizeof(char) * 12);
 		if (!(*resptr))
 			return (-1);
-		ft_strlcpy(*resptr, "-2147483648", 12);
+		ft_strncpy(*resptr, "-2147483648", 12);
 		return (1);
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:57:06 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:42:49 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,26 @@
 # include "ft_read/gnl.h"
 # include "ft_stack/stack.h"
 
+# define FT_BIN_BASE "01"
+# define FT_INT_BASE "0123456789"
+# define FT_HXU_BASE "0123456789ABCDEF"
+# define FT_HXL_BASE "0123456789abcdef"
+
 # define FT_ERROR -1
 # define FT_SUCCESS 0
+# define FT_LONG_ERR -2147483649
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef enum s_bool
+{
+	false,
+	true
+}	t_bool;
 
 //////////////////////////
 //	Character functions //
@@ -262,9 +274,10 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
  */
 void			*ft_memset(void *b, int c, size_t len);
 
-//////////////////////////////
-// Number related functions //
-//////////////////////////////
+//
+///////////////////////////////
+// Convert related functions //
+///////////////////////////////
 //
 
 /**
@@ -285,11 +298,52 @@ char			*ft_itoa(int n);
  */
 int				ft_atoi(const char *str);
 
+/**
+ * @brief atoi but normalized to uint (form push_swap)
+ * 
+ * @param str 
+ * @return long int 
+ */
+long int		ft_atoi_ui(char *str);
+
+//
+//////////////////////////////
+// Number related functions //
+//////////////////////////////
+//
+
+/**
+ * @brief Return max of 2 ints
+ * 
+ * @param a 
+ * @param b 
+ * @return int 
+ */
+int				ft_max(int a, int b);
+
+/**
+ * @brief Return min of 2 ints
+ * 
+ * @param a 
+ * @param b 
+ * @return int 
+ */
+int				ft_min(int a, int b);
+
 //
 /////////////////////////
 // String manipulation //
 /////////////////////////
 //
+
+/**
+ * @brief Checks if c is in s
+ * 
+ * @param c 
+ * @param s 
+ * @return int 
+ */
+int				ft_in(char c, char *s);
 
 /**
  * @brief Allocates and returns an array of strings obtained by splitting ’s’
@@ -320,6 +374,24 @@ char			*ft_strchr(const char *s, int c);
  * @return char* 
  */
 char			*ft_strdup(const char *s1);
+
+/**
+ * @brief Allocate and return a dublicate of the string, but up to (n-1) chars
+ * 
+ * Auto-terminates
+ * @param s 
+ * @param n 
+ * @return char* 
+ */
+char			*ft_strndup(char *s, size_t n);
+
+/**
+ * @brief allocate and return rev(string)
+ * 
+ * @param s 
+ * @return char* 
+ */
+char			*ft_strrev(char *s);
 
 /**
  * @brief Apply f() to every character of the string, characters
@@ -399,7 +471,7 @@ char			*ft_strrchr(const char *s, int c);
  * @param set 
  * @return char* 
  */
-char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char *s1, char *set);
 
 /**
  * @brief Allocates and returns a substring from the string s.
@@ -410,7 +482,40 @@ char			*ft_strtrim(char const *s1, char const *set);
  * @param len 
  * @return char* 
  */
-char			*ft_substr(const char *s, unsigned int start, size_t len);
+char			*ft_substr(const char *s, int start, int len);
+
+/**
+ * @brief Appends up to (n-1) chars from s1 to s2
+ * 
+ * Auto-terminates
+ * Memory cant overlap
+ * Returns a pointer to s1
+ * @param s1 
+ * @param s2 
+ * @param n 
+ * @return char* 
+ */
+char			*ft_strncat(char *s1, char *s2, size_t n);
+
+/**
+ * @brief copies up to (len-1) chars (or until nul-char) from src to dst. 
+ * 
+ * Auto-terminates.
+ * @param dst 
+ * @param src 
+ * @param len 
+ * @return char* 
+ */
+char			*ft_strncpy(char *dst, char *src, size_t len);
+
+/**
+ * @brief Convert str to a number in base "base".
+ * 
+ * @param str 
+ * @param base 
+ * @return long int 
+ */
+long int		ft_atoi_base(char *str, char *base);
 
 /**
  * @brief Get size of array of strings
@@ -431,47 +536,42 @@ int				get_str_arr_sz(char **text);
  */
 void			free_str_arr(char ***text);
 
-// int		ft_atoi(const char *str);
-// void	ft_bzero(void *s, size_t n);
-// void	*ft_calloc(size_t count, size_t size);
-// int		ft_isalnum(int c);
-// int		ft_isalpha(int c);
-// int		ft_isascii(int c);
-// int		ft_isdigit(int c);
-// int		ft_isprint(int c);
-// void	*ft_memchr(const void *s, int c, size_t n);
-// int		ft_memcmp(const void *s1, const void *s2, size_t n);
-// void	*ft_memcpy(void *dst, const void *src, size_t n);
-// void	*ft_memmove(void *dst, const void *src, size_t len);
-// void	*ft_memset(void *b, int c, size_t len);
-// char	*ft_strchr(const char *s, int c);
-// char	*ft_strdup(const char *s1);
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-// size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-// size_t	ft_strlen(const char *s);
-// int		ft_strncmp(const char *s1, const char *s2, size_t n);
-// char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-// char	*ft_strrchr(const char *s, int c);
-// int		ft_tolower(int c);
-// int		ft_toupper(int c);
-// char	*ft_substr(const char *s, unsigned int start, size_t len);
-// char	*ft_strjoin(char const *s1, char const *s2);
-// char	*ft_strtrim(char const *s1, char const *set);
-// char	**ft_split(char const *s, char c);
-// char	*ft_itoa(int n);
-// char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-// void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-// void	ft_putchar_fd(char c, int fd);
-// void	ft_putstr_fd(char *s, int fd);
-// void	ft_putendl_fd(char *s, int fd);
-// void	ft_putnbr_fd(int n, int fd);
-// t_list	*ft_lstnew(void *content);
-// void	ft_lstadd_front(t_list **lst, t_list *new);
-// int		ft_lstsize(t_list *lst);
-// t_list	*ft_lstlast(t_list *lst);
-// void	ft_lstadd_back(t_list **lst, t_list *new);
-// void	ft_lstdelone(t_list *lst, void (*del)(void *));
-// void	ft_lstclear(t_list **lst, void (*del)(void *));
-// void	ft_lstiter(t_list *lst, void (*f)(void *));
-// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+//
+///////////////////////////////
+// Convert related functions //
+///////////////////////////////
+//
+
+/**
+ * @brief put a character into fd
+ * 
+ * @param c 
+ * @param fd 
+ */
+void			ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief Put a string with endline into fd
+ * 
+ * @param s 
+ * @param fd 
+ */
+void			ft_putendl_fd(char *s, int fd);
+
+/**
+ * @brief put a number (base 10) into a fd
+ * 
+ * @param n 
+ * @param fd 
+ */
+void			ft_putnbr_fd(int n, int fd);
+
+/**
+ * @brief Put a string into fd
+ * 
+ * @param s 
+ * @param fd 
+ */
+void			ft_putstr_fd(char *s, int fd);
+
 #endif

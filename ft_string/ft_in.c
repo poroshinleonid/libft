@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_in.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:45:37 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:26:43 by lporoshi         ###   ########.fr       */
+/*   Created: 2023/11/20 19:54:13 by lporoshi          #+#    #+#             */
+/*   Updated: 2023/11/20 19:56:56 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_in(char c, char *s)
 {
-	write(fd, &c, 1);
+	if (!s)
+		return (FT_ERROR);
+	while (*s)
+		if (*s == c)
+			return (1);
+	return (0);
 }

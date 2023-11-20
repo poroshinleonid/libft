@@ -6,34 +6,25 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:33:50 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:55:10 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:00:10 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static int	ft_in(const char c, const char *set)
-{
-	while (*set)
-	{
-		if (c == *set)
-			return (1);
-		set++;
-	}
-	return (0);
-}
-
-static int	ft_get_start(const char *s1, const char *set)
+static int	ft_get_start(const char *s1, char *set)
 {
 	int	i;
 
+	if (!s1 || !set)
+		return (FT_ERROR);
 	i = 0;
 	while (s1[i] && ft_in(s1[i], set))
 		i++;
 	return (i);
 }
 
-static int	ft_get_end(const char *s1, const char *set)
+static int	ft_get_end(const char *s1, char *set)
 {
 	int	i;
 
@@ -54,7 +45,7 @@ static char	*ft_get_empty_str(void)
 	return (s);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	int		start;
 	int		end;
@@ -63,7 +54,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	start = ft_get_start(s1, set);
+	start = ft_get_start(set, s1);
 	end = ft_get_end(s1, set);
 	if (end < start)
 		return (ft_get_empty_str());

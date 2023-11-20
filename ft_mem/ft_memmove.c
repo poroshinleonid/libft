@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:16:11 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 16:36:20 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:04:55 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	int			offset;
 	long long	llen;
 
+	if (!dst || !src)
+		return (NULL);
 	llen = (long long)len;
 	if (dst == src || !llen)
 		return (dst);

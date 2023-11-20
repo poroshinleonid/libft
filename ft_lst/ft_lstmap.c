@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:36:54 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 15:12:47 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:06:34 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static void	ft_free_list(t_list *head, void (*del)(void *))
 			return ;
 		}
 	}
+	return ;
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))

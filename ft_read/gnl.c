@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:22:46 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:56:28 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:57:37 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*dump_to_tail(char **tail, char **line)
 	int		line_len;
 	char	*temp_line;
 
-	eol_pos = ft_in(*line, '\n');
+	eol_pos = ft_in_gnl(*line, '\n');
 	line_len = ft_strlen_gnl(*line);
 	if (eol_pos == line_len - 1)
 		return (*line);
@@ -100,7 +100,7 @@ char	*scan_line(int fd, char **line, char **tail, int l)
 			return (*line);
 		else if (read_sz == 0)
 			return (*line);
-		else if (*line && ft_in(*line, '\n') == -1)
+		else if (*line && ft_in_gnl(*line, '\n') == -1)
 		{
 			read_sz = read_buf(fd, line, end_pos);
 			if (read_sz == -1 && check_read_success(read_sz, line, NULL))

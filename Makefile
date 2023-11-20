@@ -1,78 +1,73 @@
-# Modules:
-# characters
-# one-way list structure
-# memory
-# numbers
-# reading
-# stack structure
-# strings
-# writing
-
 NAME = libft.a 
 
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror 
 
-CFILES = ft_bzero.c \
-ft_isalpha.c \
-ft_isprint.c \
-ft_memcmp.c \
-ft_memset.c \
-ft_strlcat.c \
-ft_strncmp.c \
-ft_tolower.c \
-ft_calloc.c \
-ft_isascii.c \
-ft_memcpy.c \
-ft_strchr.c \
-ft_strlcpy.c \
-ft_strnstr.c \
-ft_toupper.c \
-ft_atoi.c \
-ft_isalnum.c \
-ft_isdigit.c \
-ft_memchr.c \
-ft_memmove.c \
-ft_strdup.c \
-ft_strlen.c \
-ft_substr.c \
-ft_strrchr.c \
-ft_strjoin.c \
-ft_strtrim.c \
-ft_split.c \
-ft_itoa.c \
-ft_strmapi.c \
-ft_striteri.c \
-ft_putchar_fd.c \
-ft_putstr_fd.c \
-ft_putendl_fd.c \
-ft_putnbr_fd.c \
+CFILES = ./ft_char/ft_char_change_case.c \
+./ft_char/ft_char_info.c \
+./ft_conv/ft_atoi.c \
+./ft_conv/ft_atoi_base.c \
+./ft_conv/ft_atoi_ui.c \
+./ft_conv/ft_itoa.c \
+./ft_conv/ft_itoa_base.c \
+./ft_lst/ft_lstadd_back.c \
+./ft_lst/ft_lstadd_front.c \
+./ft_lst/ft_lstclear.c \
+./ft_lst/ft_lstdelone.c \
+./ft_lst/ft_lstiter.c \
+./ft_lst/ft_lstlast.c \
+./ft_lst/ft_lstmap.c \
+./ft_lst/ft_lstnew.c \
+./ft_lst/ft_lstsize.c \
+./ft_mem/ft_bzero.c \
+./ft_mem/ft_calloc.c \
+./ft_mem/ft_memchr.c \
+./ft_mem/ft_memcmp.c \
+./ft_mem/ft_memcpy.c \
+./ft_mem/ft_memmove.c \
+./ft_mem/ft_memset.c \
+./ft_mem/ft_realloc.c \
+./ft_num/ft_minmax.c \
+./ft_read/gnl.c \
+./ft_read/gnl_utils.c \
+./ft_read/gnl_utils_2.c \
+./ft_stack/stack.c \
+./ft_stack/stack_methods.c \
+./ft_stack/stack_methods_2.c \
+./ft_stack/stack_methods_3.c \
+./ft_string/ft_in.c \
+./ft_string/ft_split.c \
+./ft_string/ft_strchr.c \
+./ft_string/ft_strdup.c \
+./ft_string/ft_striteri.c \
+./ft_string/ft_strjoin.c \
+./ft_string/ft_strlen.c \
+./ft_string/ft_strmapi.c \
+./ft_string/ft_strncat.c \
+./ft_string/ft_strncmp.c \
+./ft_string/ft_strncpy.c \
+./ft_string/ft_strndup.c \
+./ft_string/ft_strnstr.c \
+./ft_string/ft_strrchr.c \
+./ft_string/ft_strrev.c \
+./ft_string/ft_strtrim.c \
+./ft_string/ft_substr.c \
+./ft_string/string_array_utils.c \
+./ft_write/ft_putchar_fd.c \
+./ft_write/ft_putendl_fd.c \
+./ft_write/ft_putnbr_fd.c \
+./ft_write/ft_putstr_fd.c
 
 OBJECTS = $(CFILES:.c=.o)
-
-CFILESBONUS = ft_lstadd_back_bonus.c \
-ft_lstadd_front_bonus.c \
-ft_lstclear_bonus.c \
-ft_lstdelone_bonus.c \
-ft_lstiter_bonus.c \
-ft_lstlast_bonus.c \
-ft_lstmap_bonus.c \
-ft_lstnew_bonus.c \
-ft_lstsize_bonus.c \
-
-OBJECTSBONUS = $(CFILESBONUS:.c=.o)
 
 $(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
 
 all: $(NAME) 
 
-bonus: $(NAME) $(OBJECTSBONUS)
-	ar -rc $(NAME) $(OBJECTSBONUS)
-
 clean: 
-	rm -f $(OBJECTS) $(OBJECTSBONUS)
+	rm -f $(OBJECTS)
 
 fclean: clean 
 	rm -f $(NAME)

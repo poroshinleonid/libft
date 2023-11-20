@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:16:05 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:55:05 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:43:14 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ static char	*ft_handle_bigstart(char **res)
 	return (*res);
 }
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, int start, int len)
 {
-	size_t	maxlen;
-	size_t	offset;
+	int		maxlen;
+	int		offset;
 	char	*res;
 
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_handle_bigstart(&res));
 	maxlen = ft_strlen(s + start) + 1;

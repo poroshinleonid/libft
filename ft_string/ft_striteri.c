@@ -6,14 +6,18 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:43:06 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:32:07 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:48:43 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{

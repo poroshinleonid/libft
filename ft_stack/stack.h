@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:22:10 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:17:18 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:41:23 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,11 @@
 # include <string.h>
 # include <stdio.h>
 # include <limits.h>
+# include "../libft.h"
 
 # define ITOA_ERR -2147483649
-# define FT_LONG_ERR -2147483649
 # define FT_LONG_TERMINATOR -2147483650
-# define FT_SUCCESS 0
-# define FT_ERROR -1
 # define FT_STACK_EMPTY -2
-# define CMD_SA 1
-# define CMD_SB 2
-# define CMD_SS 3
-# define CMD_PA 4
-# define CMD_PB 5
-# define CMD_RA 6
-# define CMD_RB 7
-# define CMD_RR 8
-# define CMD_RRA 9
-# define CMD_RRB 10
-# define CMD_RRR 11
 
 typedef struct s_stack {
 	void			*content;

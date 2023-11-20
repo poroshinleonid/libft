@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_minmax.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 19:01:45 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/17 17:12:16 by lporoshi         ###   ########.fr       */
+/*   Created: 2023/11/20 15:27:19 by lporoshi          #+#    #+#             */
+/*   Updated: 2023/11/20 19:29:11 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "../libft.h"
 
-int	ft_max(int a, int b)
+char	*ft_strncat(char *s1, char *s2, size_t n)
 {
-	if (a > b)
-		return (a);
-	return (b);
-}
+	char	*start;
 
-int	ft_min(int a, int b)
-{
-	if (a < b)
-		return (a);
-	return (b);
+	start = s1;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	while (s1)
+		s1++;
+	while (*s2 != '\0' && n)
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+		n--;
+	}
+	*s1 = '\0';
+	return (start);
 }

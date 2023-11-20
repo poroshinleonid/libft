@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:42:35 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:30:46 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:00:38 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s1)
 	char	*s2;
 	int		offset;
 
+	if (!s1)
+		return (NULL);
 	s2 = (char *)malloc(ft_strlen(s1) + 1);
 	if (!s2)
 		return (NULL);

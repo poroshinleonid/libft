@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 20:59:21 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:23:29 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:50:56 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_count_words(char const *s, char c)
 	int	wc;
 	int	inside;
 
+	if (!s)
+		return (FT_ERROR);
 	wc = 0;
 	inside = 0;
 	while (*s == c)
@@ -110,6 +112,11 @@ char	**ft_split(char const *s, char c)
 		return (array);
 	}
 	wc = ft_count_words(s, c);
+	if (wc == FT_ERROR)
+	{
+		free_str_arr(&array);
+		return (NULL);
+	}
 	array = ft_allocate_words(s, c, wc);
 	return (array);
 }

@@ -6,13 +6,13 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:24:40 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:56:38 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:57:50 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "gnl.h"
 
-int	ft_in(char *str, const char c)
+int	ft_in_ngl(char *str, const char c)
 {
 	int	i;
 

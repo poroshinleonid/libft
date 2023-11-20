@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:30:56 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:49:03 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:24:28 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_len;
 	size_t	haystack_len;
 
+	if (!haystack || !needle)
+		return (NULL);
 	haystack_len = ft_strlen(haystack);
 	needle_len = ft_strlen(needle);
 	if (needle_len == 0 || *needle == '\0')

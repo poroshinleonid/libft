@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:01:34 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 16:38:21 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:05:18 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*ptr;
 	unsigned char	data;
 
+	if (!b)
+		return (NULL);
 	ptr = (unsigned char *)b;
 	data = (unsigned char)c;
 	while (len)

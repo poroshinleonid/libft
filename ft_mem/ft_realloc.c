@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:13:01 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 16:19:06 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:05:50 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_realloc(void *old_mem, size_t old_sz, size_t new_sz)
 {
 	void	*new_mem;
 
+	if (!old_mem)
+		return (NULL);
 	new_mem = (void *)malloc(new_sz);
 	if (new_mem == NULL)
 		return (NULL);

@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:45:37 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:26:43 by lporoshi         ###   ########.fr       */
+/*   Created: 2023/11/20 19:34:05 by lporoshi          #+#    #+#             */
+/*   Updated: 2023/11/20 20:06:21 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strrev(char *s)
 {
-	write(fd, &c, 1);
+	int		len;
+	char	*res;
+	int		i;
+
+	len = ft_strlen(s);
+	if (len == -1)
+		return (NULL);
+	if (len == 0)
+		return (ft_strdup(""));
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (NULL);
+	i = 0;
+	while (len > 0)
+	{
+		res[i] = s[len - 1];
+		len--;
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }

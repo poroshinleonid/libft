@@ -6,25 +6,23 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 15:49:48 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:14:46 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:39:56 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "../libft.h"
 
 int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 int			ft_isdigit(int c);
 
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
 static char	*skip_sign(char *str, int *sign)
 {
+	if (!str)
+	{
+		*sign = -2;
+		return (NULL);
+	}
 	if (*str == '-')
 	{
 		if (ft_isdigit(*(str + 1)))

@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:45:37 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:26:43 by lporoshi         ###   ########.fr       */
+/*   Created: 2023/11/20 19:30:07 by lporoshi          #+#    #+#             */
+/*   Updated: 2023/11/20 19:32:34 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strndup(char *s, size_t n)
 {
-	write(fd, &c, 1);
+	char	*copy;
+	int		offset;
+
+	if (!s)
+		return (NULL);
+	copy = (char *)malloc(ft_min(ft_strlen(s), n) + 1);
+	if (!copy)
+		return (NULL);
+	offset = 0;
+	while (s[offset] * n > 0)
+	{
+		copy[offset] = s[offset];
+		offset++;
+		n--;
+	}
+	copy[offset] = '\0';
+	return (copy);
 }
