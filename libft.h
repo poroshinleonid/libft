@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:42:49 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:51:21 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -548,7 +548,7 @@ void			free_str_arr(char ***text);
  * @param c 
  * @param fd 
  */
-void			ft_putchar_fd(char c, int fd);
+int				ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Put a string with endline into fd
@@ -556,7 +556,7 @@ void			ft_putchar_fd(char c, int fd);
  * @param s 
  * @param fd 
  */
-void			ft_putendl_fd(char *s, int fd);
+int				ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief put a number (base 10) into a fd
@@ -564,7 +564,7 @@ void			ft_putendl_fd(char *s, int fd);
  * @param n 
  * @param fd 
  */
-void			ft_putnbr_fd(int n, int fd);
+int			ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief Put a string into fd
@@ -572,6 +572,6 @@ void			ft_putnbr_fd(int n, int fd);
  * @param s 
  * @param fd 
  */
-void			ft_putstr_fd(char *s, int fd);
+int				ft_putstr_fd(char *s, int fd);
 
 #endif

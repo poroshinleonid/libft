@@ -1,8 +1,3 @@
-Functions:
-	Add all writers
 Modules:
-	Printf
 	Create a normal universal double-linked list. Best if it is circular.
-Changes:
-	All of the useful defined from all other projects
-	Open my old projects and scour them to find anything that I could use in this libft.
+	add del() functionality to it

@@ -57,7 +57,27 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_write/ft_putchar_fd.c \
 ./ft_write/ft_putendl_fd.c \
 ./ft_write/ft_putnbr_fd.c \
-./ft_write/ft_putstr_fd.c
+./ft_write/ft_putstr_fd.c \
+./ft_write/ft_printf/conv_writers_1.c \
+./ft_write/ft_printf/conv_writers_1_bonus.c \
+./ft_write/ft_printf/conv_writers_2.c \
+./ft_write/ft_printf/conv_writers_2_bonus.c \
+./ft_write/ft_printf/ft_printf.c \
+./ft_write/ft_printf/ft_printf_bonus.c \
+./ft_write/ft_printf/ft_printf_dec_utils_1_bonus.c \
+./ft_write/ft_printf/ft_printf_dec_utils_2_bonus.c \
+./ft_write/ft_printf/ft_printf_dec_utils_3_bonus.c \
+./ft_write/ft_printf/ft_printf_dec_utils_4_bonus.c \
+./ft_write/ft_printf/ft_printf_string_utils_1_bonus.c \
+./ft_write/ft_printf/ft_printf_string_utils_2_bonus.c \
+./ft_write/ft_printf/ft_printf_utils.c \
+./ft_write/ft_printf/ft_printf_utils_2.c \
+./ft_write/ft_printf/ft_printf_utils_2_bonus.c \
+./ft_write/ft_printf/ft_printf_utils_bonus.c \
+./ft_write/ft_printf/hex_utils_2_bonus.c \
+./ft_write/ft_printf/hex_utils_3_bonus.c \
+./ft_write/ft_printf/hex_utils_bonus.c \
+./ft_write/ft_printf/width_utils_bonus.c \
 
 OBJECTS = $(CFILES:.c=.o)
 

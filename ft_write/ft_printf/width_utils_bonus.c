@@ -6,12 +6,12 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 19:27:58 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/10/26 18:18:13 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:52:13 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_bonus.h"
-#include "libft/libft.h"
+#include "../../libft.h"
 
 char	*crop_strrepr_b(char *s, int maxw)
 {

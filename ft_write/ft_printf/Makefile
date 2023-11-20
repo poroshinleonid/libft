@@ -31,11 +31,11 @@ OBJECTS = $(CFILES:.c=.o)
 
 BOBJECTS = $(BFILES:.c=.o)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) $(BOBJECTS)
 	make -C $(LIBFT)
 	cp $(LIBFT)/libft.a ./
 	mv ./libft.a ./$(NAME)
-	ar -rc $(NAME) $(OBJECTS)
+	ar -rc $(NAME) $(OBJECTS) $(BOBJECTS)
 
 bonus: $(NAME) $(BOBJECTS)
 	make -C $(LIBFT)
