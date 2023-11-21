@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:51:21 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/21 16:59:32 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include "ft_read/gnl.h"
 # include "ft_stack/stack.h"
+# include "ft_clst/ft_clst.h"
+# include "ft_write/ft_printf/ft_printf_bonus.h"
 
 # define FT_BIN_BASE "01"
 # define FT_INT_BASE "0123456789"
@@ -564,7 +566,7 @@ int				ft_putendl_fd(char *s, int fd);
  * @param n 
  * @param fd 
  */
-int			ft_putnbr_fd(int n, int fd);
+int				ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief Put a string into fd

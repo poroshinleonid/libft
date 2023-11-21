@@ -78,6 +78,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_write/ft_printf/hex_utils_3_bonus.c \
 ./ft_write/ft_printf/hex_utils_bonus.c \
 ./ft_write/ft_printf/width_utils_bonus.c \
+./ft_clst/ft_clst.c
 
 OBJECTS = $(CFILES:.c=.o)
 

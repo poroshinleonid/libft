@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:26:05 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/19 19:05:40 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:00:35 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 # define EOI 3
 # define CHAR 4
 # define SPECIFIERS_L "sdsfdf"
-# define FLAGS_L "0 "
-# define CONVS_L "dx"
 
 # define CV_CHR 'c'
 # define CV_STR 's'
