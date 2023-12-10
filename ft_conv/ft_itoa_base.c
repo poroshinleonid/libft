@@ -6,11 +6,12 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:12:50 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 20:06:37 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:32:18 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdbool.h>
 
 static int	check_base(char *base)
 {
@@ -39,7 +40,7 @@ static int	check_base(char *base)
 
 static char	*convert_itoa(char *base, long int num)
 {
-	t_bool	is_negative;
+	bool	is_negative;
 	int		i;
 	int		base_len;
 	char	rev_res[50];

@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/21 16:59:32 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:29:49 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-typedef enum s_bool
-{
-	false,
-	true
-}	t_bool;
 
 //////////////////////////
 //	Character functions //
@@ -537,6 +531,22 @@ int				get_str_arr_sz(char **text);
  * @return int 
  */
 void			free_str_arr(char ***text);
+
+/**
+ * @brief Join string array into one string, separated by sep
+ * 
+ * @param arr 
+ * @return char* 
+ */
+char			*strjoin_str_arr(char **strings, char sep);
+
+/**
+ * @brief Get the sum of lengths of all string in a string array
+ * 
+ * @param strings 
+ * @return int 
+ */
+int				get_str_arr_len(char **strings);
 
 //
 ///////////////////////////////
