@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_in.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 19:54:13 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 19:56:56 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:30:47 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_in(char c, char *s)
 {
