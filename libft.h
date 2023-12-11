@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/10 15:29:49 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:21:58 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -426,6 +426,15 @@ int				ft_strlen(const char *s);
  * @return char* 
  */
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/**
+ * @brief Compare strings
+ * 
+ * @param s1 
+ * @param s2 
+ * @return int 
+ */
+int				ft_strcmp(const char *s1, const char *s2);
 
 /**
  * @brief Compare strings (only up to n-th character)
