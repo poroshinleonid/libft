@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:16:23 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 19:28:18 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:31:16 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, char *src, size_t len)
 {

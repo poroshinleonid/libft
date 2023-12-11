@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 20:59:21 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/20 19:50:56 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:30:30 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 static int	ft_count_words(char const *s, char c)
 {

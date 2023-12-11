@@ -2,7 +2,7 @@ NAME = libft.a
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -I .
 
 CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_char/ft_char_info.c \
