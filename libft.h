@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:21:58 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/13 16:26:09 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,14 @@ int				ft_isalpha(int c);
  * @return int 
  */
 int				ft_isascii(int c);
+
+/**
+ * @brief Check if the character is a space
+ *
+ * @param c
+ * @return int
+ */
+int				ft_isspace(int c);
 
 /**
  * @brief Check if the character is a digit
