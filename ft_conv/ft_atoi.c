@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:32:52 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:31:16 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/14 13:58:07 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(const char c)
-{
-	if (c == ' ' || c == '\t' || c == '\v' \
-	|| c == '\n' || c == '\f' || c == '\r')
-		return (1);
-	return (0);
-}
 
 static const char	*skip_sign(const char *str, int *sign)
 {

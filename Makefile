@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror -I .
 
 CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_char/ft_char_info.c \
+./ft_char/ft_char_info_2.c \
 ./ft_conv/ft_atoi.c \
 ./ft_conv/ft_atoi_base.c \
 ./ft_conv/ft_atoi_ui.c \
