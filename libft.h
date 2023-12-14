@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/13 16:26:09 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/14 17:32:55 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -360,6 +360,22 @@ int				ft_in(char c, char *s);
  * @return char** 
  */
 char			**ft_split(char const *s, char c);
+
+/**
+ * @brief Allocates and returns an array of strings obtained by splitting ’s’
+ * 	using the first ’c’ character (if found) as a delimiter.
+ * Array is NULL-terminated.
+ * 
+ * NULL as input or error -> returns NULL
+ * Empty string = array with only one item, which is null.
+ * Unlike ft_split, doesn't descriminate empty part of string.
+ * ft_splitone("abc", "c") -> ["ab", ""]
+ * @param s 
+ * @param c 
+ * @return char** 
+ * 
+ */
+char			**ft_splitone(char const *s, char c);
 
 /**
  * @brief Returns a pointer to the first
