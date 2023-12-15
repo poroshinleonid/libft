@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/13 16:26:09 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/15 12:57:15 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 
 # define FT_ERROR -1
 # define FT_SUCCESS 0
+# define FT_TRUE 1
 # define FT_LONG_ERR -2147483649
 
 typedef struct s_list
