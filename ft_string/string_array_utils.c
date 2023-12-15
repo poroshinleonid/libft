@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 12:18:59 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 13:27:07 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/15 14:58:09 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void	free_str_arr(char ***text)
 		(*text)++;
 	}
 	free (orig_arr);
+	*text = NULL;
 	return ;
 }
