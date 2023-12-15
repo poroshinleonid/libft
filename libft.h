@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 13:01:37 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:02:22 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -369,7 +369,7 @@ char			**ft_split(char const *s, char c);
  * 
  * NULL as input or error -> returns NULL
  * Empty string = array with only one item, which is null.
- * Unlike ft_split, doesn't descriminate empty part of string.
+ * Unlike ft_split, doesn't discriminate empty part of string.
  * ft_splitone("abc", "c") -> ["ab", ""]
  * @param s 
  * @param c 
