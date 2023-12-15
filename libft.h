@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 13:02:22 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:04:53 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 
 # define FT_ERROR -1
 # define FT_SUCCESS 0
+# define FT_FALSE 0
 # define FT_TRUE 1
 # define FT_LONG_ERR -2147483649
 
