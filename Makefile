@@ -45,6 +45,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_string/ft_striteri.c \
 ./ft_string/ft_strjoin.c \
 ./ft_string/ft_strlen.c \
+./ft_string/ft_str_surround.c \
 ./ft_string/ft_strmapi.c \
 ./ft_string/ft_strncat.c \
 ./ft_string/ft_strcmp.c \

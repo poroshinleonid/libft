@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 13:04:53 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/15 16:47:28 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -503,6 +503,15 @@ char			*ft_strrchr(const char *s, int c);
  * @return char* 
  */
 char			*ft_strtrim(char *s1, char *set);
+
+/**
+ * @brief Surround s with surround_char, reallocate.
+ *
+ * @param s
+ * @param surround_char
+ * @return int
+ */
+int				ft_str_surround(char **s, char surround_char);
 
 /**
  * @brief Allocates and returns a substring from the string s.
