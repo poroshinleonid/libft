@@ -39,6 +39,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_stack/stack_methods_3.c \
 ./ft_string/ft_in.c \
 ./ft_string/ft_split.c \
+./ft_string/ft_splitone.c \
 ./ft_string/ft_strchr.c \
 ./ft_string/ft_strdup.c \
 ./ft_string/ft_striteri.c \
