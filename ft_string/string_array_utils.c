@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string_array_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 12:18:59 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:31:16 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:27:07 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,16 @@ int	get_str_arr_sz(char **text)
 
 void	free_str_arr(char ***text)
 {
+	char	**orig_arr;
+
+	orig_arr = *text;
 	if (text == NULL || *text == NULL)
 		return ;
 	while (**text != NULL)
 	{
 		free(**text);
-		(**text)++;
+		(*text)++;
 	}
-	free (*text);
+	free (orig_arr);
 	return ;
 }
