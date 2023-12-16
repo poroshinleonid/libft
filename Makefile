@@ -21,6 +21,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_lst/ft_lstmap.c \
 ./ft_lst/ft_lstnew.c \
 ./ft_lst/ft_lstsize.c \
+./ft_lst/ft_lst_replace_node_to_list.c \
 ./ft_mem/ft_bzero.c \
 ./ft_mem/ft_calloc.c \
 ./ft_mem/ft_memchr.c \

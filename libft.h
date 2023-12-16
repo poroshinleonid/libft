@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 17:22:19 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/16 12:53:51 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,17 @@ int				ft_toupper(int c);
 ///////////////////////////////////
 // One-way linked list structure //
 ///////////////////////////////////
+
+/**
+ * @brief 
+ * returns the pointer to cur->next
+ * @param prev
+ * @param dst
+ * @param source
+ * @return t_list*
+ */
+t_list			*lst_replace_node_to_list(t_list *prev, \
+				t_list **dst, t_list *source);
 
 /**
  * @brief Add the node "new" at the end of the list.
