@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:40:15 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/16 13:28:36 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/16 13:31:15 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_list	*lst_replace_node_to_list(t_list *prev, t_list **dst, t_list *source)
 	else if ((*dst)->next == NULL)
 		ft_lstadd_back(&prev, source);
 	else
-		lst_replace_node2list_mid(prev, dst, source);
+		lst_replace_node2list_mid(prev, *dst, source);
 	free(dst_saved);
 	return (dst_next_saved);
 }
