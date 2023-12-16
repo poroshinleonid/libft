@@ -6,20 +6,39 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:40:15 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/16 12:54:51 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/16 13:28:36 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	lst_replace_node2list_front(t_list **dst, t_list *source);
-void	lst_replace_node2list_mid(t_list *prev, t_list **cur, t_list *source);
+static void	lst_replace_node2list_front(t_list **dst, t_list *source)
+{
+	t_list	*source_last;
+
+	source_last = ft_lstlast(source);
+	source_last->next = (*dst)->next;
+	*dst = source;
+	return ;
+}
+
+static void	lst_replace_node2list_mid(t_list *prev, t_list *cur, t_list *source)
+{
+	t_list	*source_last;
+
+	source_last = ft_lstlast(source);
+	source_last->next = cur->next;
+	prev->next = source;
+	return ;
+}
 
 t_list	*lst_replace_node_to_list(t_list *prev, t_list **dst, t_list *source)
 {
-	t_list	*ret_val;
+	t_list	*dst_saved;
+	t_list	*dst_next_saved;
 
-	ret_val = (*dst)->next;
+	dst_saved = (*dst);
+	dst_next_saved = dst_saved->next;
 	if ((*dst) == NULL || source == NULL)
 		return (NULL);
 	if (prev == NULL)
@@ -28,6 +47,6 @@ t_list	*lst_replace_node_to_list(t_list *prev, t_list **dst, t_list *source)
 		ft_lstadd_back(&prev, source);
 	else
 		lst_replace_node2list_mid(prev, dst, source);
-	free((*dst));
-	return (ret_val);
+	free(dst_saved);
+	return (dst_next_saved);
 }
