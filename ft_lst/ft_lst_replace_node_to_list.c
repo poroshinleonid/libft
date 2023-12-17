@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lst_replace_node_to_list.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:40:15 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/16 15:03:40 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:43:17 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static void	lst_replace_node2list_front(t_list **dst, t_list *source)
 	return ;
 }
 
-static void	lst_replace_node2list_mid(t_list *prev, t_list **cur, t_list *source)
+static void	lst_replace_node2list_mid(t_list *prev, t_list **cur,
+	t_list *source)
 {
 	t_list	*source_last;
 

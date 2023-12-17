@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:23:47 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/21 17:06:24 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:42:44 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*fill_cur_line(int fd, char **cur_line, char **buf_tail);
 int		ft_in_gnl(char *str, const char c);
 char	*ft_str_realloc(char **str, size_t len);
 int		ft_strlen_gnl(char *str);
-char	*ft_strncpy(char *dst, char *src, size_t n);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
 int		check_read_success(int read_sz, char **tail, char **line);
 void	*free_buf_tail(char **buf_tail);
 
