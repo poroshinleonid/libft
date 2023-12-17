@@ -6,7 +6,7 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:58:08 by trusanov          #+#    #+#             */
-/*   Updated: 2023/12/14 17:31:48 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:25:00 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_splitone(char const *s, char c)
 	{
 		res = (char **)malloc(sizeof(char *) * 2);
 		res[0] = ft_strdup("");
-		res[2] = NULL;
+		res[1] = NULL;
 		return (res);
 	}
 	if (!ft_in(c, (char *) s))
