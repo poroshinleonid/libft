@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:24:40 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/11/21 17:08:28 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:45:10 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	ft_strlen_gnl(char *str)
 }
 
 // Copies N symbold and then sets N+1TH SYMBOL as '\0'!
-char	*ft_strncpy(char *dst, char *src, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	char	*og_dst;
 
