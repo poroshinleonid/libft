@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/16 12:53:51 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:41:09 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -557,7 +557,7 @@ char			*ft_strncat(char *s1, char *s2, size_t n);
  * @param len 
  * @return char* 
  */
-char			*ft_strncpy(char *dst, char *src, size_t len);
+char			*ft_strncpy(char *dst, const char *src, size_t len);
 
 /**
  * @brief Convert str to a number in base "base".
