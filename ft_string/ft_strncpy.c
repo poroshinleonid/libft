@@ -6,13 +6,13 @@
 /*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 16:16:23 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:31:16 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:40:00 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	char	*start;
 
