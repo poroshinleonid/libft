@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:40:15 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/16 15:03:40 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/18 13:03:31 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static void	lst_replace_node2list_front(t_list **dst, t_list *source)
 	return ;
 }
 
-static void	lst_replace_node2list_mid(t_list *prev, t_list **cur, t_list *source)
+static void	lst_replace_node2list_mid(t_list *prev, t_list **cur, \
+										t_list *source)
 {
 	t_list	*source_last;
 
@@ -32,7 +33,7 @@ static void	lst_replace_node2list_mid(t_list *prev, t_list **cur, t_list *source
 	return ;
 }
 
-void	lst_replace_node2list_back(t_list *prev, t_list *source)
+static void	lst_replace_node2list_back(t_list *prev, t_list *source)
 {
 	prev->next = source;
 	return ;
