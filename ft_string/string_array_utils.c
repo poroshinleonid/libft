@@ -6,11 +6,37 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 12:18:59 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/15 14:58:09 by lporoshi         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:21:06 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*str_arr_cat(char **str_arr)
+{
+	int		res_len;
+	int		i;
+	int		j;
+	char	*res_str;
+
+	res_len = get_str_arr_len(str_arr);
+	if (res_len == FT_ERROR)
+		return (NULL);
+	res_str = (char *)ft_calloc(res_len + 1, sizeof(char));
+	if (res_str == NULL)
+		return (NULL);
+	i = 0;
+	while (*str_arr != NULL)
+	{
+		j = 0;
+		while ((*str_arr)[j])
+		{
+			res_str[i++] = (*str_arr)[j++];
+		}
+		str_arr++;
+	}
+	return (res_str);
+}
 
 int	get_str_arr_len(char **strings)
 {
@@ -40,7 +66,8 @@ char	*strjoin_str_arr(char **strings, char sep)
 	tmp_len = get_str_arr_len(strings);
 	if (tmp_len == -1)
 		return (NULL);
-	joined_strings = ft_calloc(tmp_len, sizeof(char));
+	joined_strings = ft_calloc(tmp_len + get_str_arr_sz(strings) + 1, \
+						sizeof(char));
 	pos = 0;
 	while (*strings)
 	{

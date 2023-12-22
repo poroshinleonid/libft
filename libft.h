@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/17 18:41:09 by trusanov         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:21:55 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -602,6 +602,14 @@ char			*strjoin_str_arr(char **strings, char sep);
  * @return int 
  */
 int				get_str_arr_len(char **strings);
+
+/**
+ * @brief cat an array of strings, no separator
+ * 
+ * @param str_arr 
+ * @return char* 
+ */
+char			*str_arr_cat(char **str_arr);
 
 //
 ///////////////////////////////
