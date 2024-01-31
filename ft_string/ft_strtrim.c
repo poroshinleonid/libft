@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:33:50 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:31:16 by trusanov         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:42:16 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ char	*ft_strtrim(char *s1, char *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	start = ft_get_start(set, s1);
+	start = ft_get_start(s1, set);
 	end = ft_get_end(s1, set);
 	if (end < start)
 		return (ft_get_empty_str());
-	trimmed = (char *)malloc(sizeof(char) * (end - start + 2));
+	trimmed = (char *)ft_calloc((end - start + 2), sizeof(char));
 	if (!trimmed)
 		return (NULL);
 	i = 0;

@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_splitone.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:58:08 by trusanov          #+#    #+#             */
-/*   Updated: 2023/12/17 18:25:00 by trusanov         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:58:16 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//if no '=', it overflows in a aycle finding char c
+//if not '=' found, should return NULL as 2nd
+//if fount at the last char of the string, should return "" as 2nd
 char	**ft_splitone(char const *s, char c)
 {
 	char	**res;
