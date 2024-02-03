@@ -30,6 +30,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_mem/ft_memmove.c \
 ./ft_mem/ft_memset.c \
 ./ft_mem/ft_realloc.c \
+./ft_mem/ft_array_utils.c \
 ./ft_num/ft_minmax.c \
 ./ft_read/gnl.c \
 ./ft_read/gnl_utils.c \
@@ -59,6 +60,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_string/ft_strtrim.c \
 ./ft_string/ft_substr.c \
 ./ft_string/string_array_utils.c \
+./ft_strint/string_array_utils_2.c \
 ./ft_write/ft_putchar_fd.c \
 ./ft_write/ft_putendl_fd.c \
 ./ft_write/ft_putnbr_fd.c \

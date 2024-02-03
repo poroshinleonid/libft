@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/03 17:26:18 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:32:24 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -290,6 +290,23 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
  * @return void* 
  */
 void			*ft_memset(void *b, int c, size_t len);
+
+/**
+ * @brief Free array of simple datatype pointers
+ * 
+ * @param arr 
+ */
+void			ptr_arr_free_simple(void ***arr);
+
+/**
+ * @brief Free array of pointers to structures
+ * using del_item function to properly free
+ * the structure memory
+ * 
+ * @param arr 
+ * @param del_item 
+ */
+void			ptr_arr_free_complex(void ***arr, void (*del_item)(void *));
 
 //
 ///////////////////////////////
