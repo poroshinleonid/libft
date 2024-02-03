@@ -66,7 +66,7 @@ char	*strjoin_str_arr(char **strings, char sep)
 	tmp_len = get_str_arr_len(strings);
 	if (tmp_len == -1)
 		return (NULL);
-	joined_strings = ft_calloc(tmp_len + get_str_arr_sz(strings) + 1, \
+	joined_strings = ft_calloc(tmp_len + get_str_arr_len(strings) + 1, \
 						sizeof(char));
 	pos = 0;
 	while (*strings)
