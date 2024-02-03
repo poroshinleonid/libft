@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2023/12/22 14:21:55 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:26:18 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -610,6 +610,16 @@ int				get_str_arr_len(char **strings);
  * @return char* 
  */
 char			*str_arr_cat(char **str_arr);
+
+/**
+ * @brief append a string to str_arr
+ * (does full reallocation and frees old memory)
+ * 
+ * @param arr_ptr 
+ * @param new_item 
+ * @return char** 
+ */
+char			**str_arr_append(char ***arr_ptr, char *new_item);
 
 //
 ///////////////////////////////
