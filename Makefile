@@ -60,7 +60,7 @@ CFILES = ./ft_char/ft_char_change_case.c \
 ./ft_string/ft_strtrim.c \
 ./ft_string/ft_substr.c \
 ./ft_string/string_array_utils.c \
-./ft_strint/string_array_utils_2.c \
+./ft_string/string_array_utils_2.c \
 ./ft_write/ft_putchar_fd.c \
 ./ft_write/ft_putendl_fd.c \
 ./ft_write/ft_putnbr_fd.c \

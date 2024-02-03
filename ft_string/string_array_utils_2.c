@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:16:35 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/03 17:25:33 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:54:05 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ char	**str_arr_append(char ***arr_ptr, char *new_item)
 	if (arr_ptr == NULL)
 		return (NULL);
 	if (*arr_ptr == NULL)
-		return (ft_strdup(new_item));
+	{
+		new_arr = ft_calloc(2, sizeof(char *));
+		new_arr[0] = ft_strdup(new_item);
+		return (new_arr);
+	}
 	sz = get_str_arr_sz(*arr_ptr);
 	new_arr = ft_calloc(sz + 2, sizeof(char *));
 	sz = 0;

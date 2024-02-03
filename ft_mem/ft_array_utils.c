@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:27:20 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/03 17:30:50 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/03 17:52:38 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ptr_arr_free_simple(void ***arr)
 {
-	char	**orig_arr;
+	void	**orig_arr;
 
 	orig_arr = *arr;
 	if (arr == NULL || *arr == NULL)
@@ -31,7 +31,7 @@ void	ptr_arr_free_simple(void ***arr)
 
 void	ptr_arr_free_complex(void ***arr, void (*del_item)(void *))
 {
-	char	**orig_arr;
+	void	**orig_arr;
 
 	orig_arr = *arr;
 	if (arr == NULL || *arr == NULL)
