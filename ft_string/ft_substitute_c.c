@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_in.c                                            :+:      :+:    :+:   */
+/*   ft_substitute_c.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 19:54:13 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/25 17:12:25 by lporoshi         ###   ########.fr       */
+/*   Created: 2024/02/25 17:21:26 by lporoshi          #+#    #+#             */
+/*   Updated: 2024/02/25 17:56:40 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_in(char c, char *s)
+char	*ft_substitute_c(char *s, char from, char to)
 {
+	char	*s_orig;
+
+	s_orig = s;
 	if (!s)
-		return (FT_ERROR);
+		return (s_orig);
 	while (*s)
-		if (*s++ == c)
-			return (1);
-	return (0);
-}
-
-int	ft_consists_of(char *str, char *chars)
-{
-	if (!str)
-		return (FT_ERROR);
-	while (*str)
-		if (!ft_in(*(str++), chars))
-			return (0);
-	return (1);
+	{
+		if (*s == from)
+			*s = to;
+		s++;
+	}
+	return (s_orig);
 }

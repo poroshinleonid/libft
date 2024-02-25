@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/03 17:32:24 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:27:25 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -378,6 +378,26 @@ int				ft_min(int a, int b);
  * @return int 
  */
 int				ft_in(char c, char *s);
+
+/**
+ * @brief True if str consists only of chars, else otherwise
+ * 
+ * @param str
+ * @param chars
+ * @return int
+ */
+int				ft_consists_of(char *str, char *chars);
+
+/**
+ * @brief Replaces char "from" to char "to" in-place
+ * 
+ * @param s
+ * @param from
+ * @param to
+ * @return char*
+ */
+char			*ft_substitute_c(char *s, char from, char to);
+
 
 /**
  * @brief Allocates and returns an array of strings obtained by splitting ’s’

@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 12:18:59 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/03 20:47:57 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/02/24 19:14:06 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,14 @@ char	*strjoin_str_arr(char **strings, char sep)
 
 int	get_str_arr_sz(char **text)
 {
-	char	*temp;
+	char	**temp;
 	int		size;
 
 	if (text == NULL)
 		return (FT_ERROR);
-	temp = *text;
+	temp = text;
 	size = 0;
-	while (temp++ != NULL)
+	while (*(temp++) != NULL)
 		size++;
 	return (size);
 }
