@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trusanov <trusanov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:49:55 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/25 17:27:25 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/03/20 20:19:00 by trusanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -397,7 +397,6 @@ int				ft_consists_of(char *str, char *chars);
  * @return char*
  */
 char			*ft_substitute_c(char *s, char from, char to);
-
 
 /**
  * @brief Allocates and returns an array of strings obtained by splitting ’s’
