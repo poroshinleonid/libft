@@ -6,7 +6,7 @@
 /*   By: lporoshi <lporoshi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:33:50 by lporoshi          #+#    #+#             */
-/*   Updated: 2024/02/25 16:42:16 by lporoshi         ###   ########.fr       */
+/*   Updated: 2024/03/20 19:23:54 by lporoshi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strtrim(char *s1, char *set)
 	start = ft_get_start(s1, set);
 	end = ft_get_end(s1, set);
 	if (end < start)
-		return (ft_get_empty_str());
+		return (free(s1), ft_get_empty_str());
 	trimmed = (char *)ft_calloc((end - start + 2), sizeof(char));
 	if (!trimmed)
 		return (free(s1), NULL);
